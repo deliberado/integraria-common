@@ -3,7 +3,7 @@ requires = ["hatchling>=1.25"]
 build-backend = "hatchling.build"
 
 [project]
-name = "integrar-common"
+name = "integraria-common"
 version = "0.1.0"
 description = "Contratos, esquemas, modelos e utilitários comuns para o pipeline de ingestão legal/RAG"
 requires-python = ">=3.11"
@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/integrar-common"]
+packages = ["src/integraria-common"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
