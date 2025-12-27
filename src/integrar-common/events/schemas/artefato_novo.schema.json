@@ -1,0 +1,94 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://schemas.integraria.local/artefato_novo.schema.json",
+    "type": "object",
+    "required": [
+        "event_id",
+        "schema_version",
+        "trace_id",
+        "correlation_id",
+        "producer",
+        "created_at",
+        "dedupe_key",
+        "payload"
+    ],
+    "properties": {
+        "event_id": {
+            "type": "string",
+            "minLength": 8
+        },
+        "schema_version": {
+            "type": "string"
+        },
+        "trace_id": {
+            "type": "string"
+        },
+        "correlation_id": {
+            "type": "string"
+        },
+        "producer": {
+            "type": "string"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "dedupe_key": {
+            "type": "string"
+        },
+        "meta": {
+            "type": [
+                "object",
+                "null"
+            ]
+        },
+        "payload": {
+            "type": "object",
+            "required": [
+                "processo_id",
+                "artefato_id",
+                "tipo",
+                "sha256",
+                "storage_uri",
+                "prioridade",
+                "pipeline_version"
+            ],
+            "properties": {
+                "processo_id": {
+                    "type": "string"
+                },
+                "artefato_id": {
+                    "type": "string"
+                },
+                "tipo": {
+                    "type": "string",
+                    "enum": [
+                        "PDF",
+                        "AUDIO",
+                        "VIDEO",
+                        "IMAGE",
+                        "DOC",
+                        "EMAIL"
+                    ]
+                },
+                "sha256": {
+                    "type": "string",
+                    "minLength": 32
+                },
+                "storage_uri": {
+                    "type": "string"
+                },
+                "prioridade": {
+                    "type": "string",
+                    "enum": [
+                        "urgent",
+                        "batch"
+                    ]
+                },
+                "pipeline_version": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://schemas.integraria.local/pipeline_falhou.schema.json",
+    "type": "object",
+    "required": [
+        "event_id",
+        "schema_version",
+        "trace_id",
+        "correlation_id",
+        "producer",
+        "created_at",
+        "dedupe_key",
+        "payload"
+    ],
+    "properties": {
+        "event_id": {
+            "type": "string"
+        },
+        "schema_version": {
+            "type": "string"
+        },
+        "trace_id": {
+            "type": "string"
+        },
+        "correlation_id": {
+            "type": "string"
+        },
+        "producer": {
+            "type": "string"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "dedupe_key": {
+            "type": "string"
+        },
+        "payload": {
+            "type": "object",
+            "required": [
+                "processo_id",
+                "artefato_id",
+                "step",
+                "error_class",
+                "message",
+                "retry_count"
+            ],
+            "properties": {
+                "processo_id": {
+                    "type": "string"
+                },
+                "artefato_id": {
+                    "type": "string"
+                },
+                "step": {
+                    "type": "string"
+                },
+                "error_class": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "stack_hash": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "retry_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "next_retry_at": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "date-time"
+                }
+            }
+        }
+    }
+}
