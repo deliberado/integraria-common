@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://schemas.integraria.local/segmentos_prontos.schema.json",
+    "$id": "https://schemas.integrar.local/segmentos_prontos.schema.json",
     "type": "object",
     "required": [
         "event_id",

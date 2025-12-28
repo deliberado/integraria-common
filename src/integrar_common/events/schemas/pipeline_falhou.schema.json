@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://schemas.integraria.local/pipeline_falhou.schema.json",
+    "$id": "https://schemas.integrar.local/pipeline_falhou.schema.json",
     "type": "object",
     "required": [
         "event_id",

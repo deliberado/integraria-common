@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://schemas.integraria.local/artefato_novo.schema.json",
+    "$id": "https://schemas.integrar.local/artefato_novo.schema.json",
     "type": "object",
     "required": [
         "event_id",
